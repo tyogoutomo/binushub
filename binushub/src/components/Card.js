@@ -12,7 +12,7 @@ const TaskCard = ({ task, onComplete, onUnComplete }) => {
 
   return (
     <div className="card">
-        <RenderIf condition={task.completed}>
+        {/* <RenderIf condition={task.completed}>
             <div className='title'>
                 <h3><strike>{task.title}</strike></h3>
                 <span className='card-important'><strike>{task.tag}</strike></span>
@@ -23,7 +23,11 @@ const TaskCard = ({ task, onComplete, onUnComplete }) => {
                 <h3>{task.title}</h3>
                 <span className='card-important'>{task.tag}</span>
             </div>
-        </RenderIf>
+        </RenderIf> */}
+        <div className='title'>
+                <h3>{task.title}</h3>
+                <span className='card-important'>{task.tag}</span>
+            </div>
         <p>{task.description}</p>
         <div className="card-footer">
             <span className='card-due'>Due: {task.dueDate}</span>
